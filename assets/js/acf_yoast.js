@@ -131,9 +131,11 @@
         }
         yoastContent += '\n';
         $.each(this.content, function (key, value) {
-          yoastContent = addSubContent(yoastContent, value);
+          if( value !== undefined ) {
+            yoastContent = addSubContent(yoastContent, value);
+          }
         });
-        return yoastContent;
+        return yoastContent.trim();
     };
 
     function addSubContent(yoastContent, subContent) {
