@@ -23,6 +23,7 @@ Class AcfYoastSeoValidator {
 
         if (defined('WPSEO_VERSION')) {
             wp_enqueue_script('acf_yoast_seo_validator', plugin_dir_url( __FILE__ ) . 'assets/js/acf_yoast.js', false, false, true);
+            wp_enqueue_script('acf_yoast_seo_validator_markdown', plugin_dir_url( __FILE__ ) . 'assets/js/micromarkdown.min.js', false, false, true);
         }
     }
 }

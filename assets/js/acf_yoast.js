@@ -55,6 +55,10 @@
                     value += $(this).prop('outerHTML');
                 });
                 break;
+            case 'markdown' :
+                value = $el.find('input').val();
+                value = micromarkdown.parse(value);
+                break;
             case 'textarea' :
             case 'wysiwyg' :
                 value = $el.find('textarea').val();
